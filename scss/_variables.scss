@@ -1,0 +1,105 @@
+//
+// //////////////////////////////////////////////////
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// V A R I A B L E S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+// //////////////////////////////////////////////////
+//
+
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// C O L O R S
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+//
+//  Here you can setup the default colors
+//  of your website 
+//
+//
+
+$primary: #ee7203;
+// $primary: #0384ee;
+$primaryLight: lighten($primary,45);
+$primaryDark: darken($primary,35);
+
+$secondary: #0D0D0D;
+$secondaryLight: lighten($secondary,80);
+$secondaryDark: darken($secondary,45);
+
+$light: #F0F0F0;
+$lightLight: lighten($light,45);
+$lightDark: darken($light,35);
+
+$dark: #0D0D0D;
+$darkLight: lighten($dark,45);
+$darkDark: darken($dark,35);
+
+$good: #1AED9E;
+$warning: #EDAB0E;
+$danger: #ED350E;
+
+$text-dark: #0D0D0D;
+$text-light: #F0F0F0;
+$heading-color: $primary;
+$link-color: darken($primary,5);
+
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// T Y P O G R A P H Y
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+//
+//  Here you can setup the default typography
+//  of your website 
+//
+//
+
+$primaryFont: 'Roboto', sans-serif;    // default primary font
+$secondaryFont: 'Roboto', sans-serif;  // default secondary font
+
+$fontBaseSize: 16px;  // default px font size
+$lineHeight: 140%; // default % line height
+
+
+//
+// ==================================================
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// L A Y O U T
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// ==================================================
+//
+//
+//  Here you can setup the default layout
+//  of your website
+//
+//
+
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// GRID SYSTEM
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+$max-width: 80%;  // container max-width
+$gutter: 32px;    // columns gutter
+$max-columns: 4;  // max number of auto-columns
+
+
+//
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// MEDIA QUERY
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+
+$media-desktop: 992px;     // Desktop devices breakpoint
+$media-tablet: 768px;      // Tablet devices breakpoint
+$media-smartphone: 576px;  // Smartphones devices breakpoint

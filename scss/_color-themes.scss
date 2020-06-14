@@ -1,0 +1,43 @@
+/*
+* //////////////////////////////////////////////////
+* ==================================================
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* C O L O R   T H E M E S
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* ==================================================
+* //////////////////////////////////////////////////
+*/
+
+
+$themes: (
+   primary: $primary,
+   primary-light: $primaryLight,
+   primary-dark: $primaryDark,
+   secondary: $secondary,
+   secondary-light: $secondaryLight,
+   secondary-dark: $primaryDark,
+   light: $light,
+   dark: $dark,
+   good: $good,
+   warning: $warning,
+   danger: $danger
+);
+
+
+// Helper theme mixin
+// @param $name: name of the theme (HTML class)
+// @param $color: color of the theme
+
+@mixin theme($name, $color) {
+   .#{$name} {
+      background: $color;
+      @include text-contrast($color);
+   }
+}
+
+
+// Including themes 
+// By looping through the $themes map
+@each $key, $value in $themes {
+   @include theme($key, $value);
+}
