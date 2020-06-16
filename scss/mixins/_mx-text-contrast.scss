@@ -17,3 +17,45 @@
       color: $text-dark;
    }
 }
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* BACKGROUND CONTRAST
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+@mixin bg-contrast($n) {
+   $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+   $light-color: round((red(#FFFFFF) * 299) + (green(#FFFFFF) * 587) + (blue(#FFFFFF) * 114) / 1000);
+   
+   @if abs($color-brightness) < ($light-color/2){
+      background: $text-light;
+   }
+   
+   @else {
+      background: $text-dark;
+   }
+}
+
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* BORDER CONTRAST
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+
+@mixin border-contrast($n) {
+   $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+   $light-color: round((red(#FFFFFF) * 299) + (green(#FFFFFF) * 587) + (blue(#FFFFFF) * 114) / 1000);
+   
+   @if abs($color-brightness) < ($light-color/2){
+      border-color: $text-light;
+   }
+   
+   @else {
+      border-color: $text-dark;
+   }
+}

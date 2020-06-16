@@ -814,6 +814,16 @@ body, html {
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 /*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* BACKGROUND CONTRAST
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* BORDER CONTRAST
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+/*
 * ==================================================
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 * P A D D I N G S
@@ -1524,7 +1534,6 @@ xmp:before {
 */
 .navbar {
   padding: 0 1rem;
-  background: #ee7203;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1535,7 +1544,8 @@ xmp:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 2px solid #F0F0F0;
+  border-bottom-width: 2px;
+  border-style: solid;
 }
 
 .navbar .navbar__brand {
@@ -1546,7 +1556,6 @@ xmp:before {
 }
 
 .navbar .navbar__brand a {
-  color: #F0F0F0;
   font-size: 1.5rem;
   text-decoration: none;
 }
@@ -1564,8 +1573,8 @@ xmp:before {
 .navbar .navbar__menu > ul {
   width: 100%;
   padding: 0;
-  background: black;
-  border-bottom: 2px solid #ee7203;
+  border-bottom-width: 2px;
+  border-style: solid;
   position: absolute;
   left: 0;
   top: 100%;
@@ -1584,7 +1593,6 @@ xmp:before {
 .navbar .navbar__menu ul li > a {
   padding: 1rem;
   font-size: 1rem;
-  color: #F0F0F0;
   font-weight: 300;
   text-decoration: none;
   text-transform: uppercase;
@@ -1593,16 +1601,8 @@ xmp:before {
   transition: all 0.15s ease-in-out;
 }
 
-.navbar .navbar__menu ul ul li {
-  background-color: black;
-}
-
 .navbar .navbar__menu ul ul li > a {
   padding: .9em 1rem;
-}
-
-.navbar .navbar__menu ul ul li ul li {
-  background-color: black;
 }
 
 .navbar .navbar__menu ul ul ul li > a {
@@ -1637,7 +1637,6 @@ xmp:before {
 
 .navbar__fast-contact > div {
   padding: 1rem;
-  color: #F0F0F0;
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1658,7 +1657,6 @@ xmp:before {
   width: 1.5rem;
   height: 1.5rem;
   z-index: 2;
-  color: #F0F0F0;
   font-size: 1.5rem;
 }
 
@@ -1675,7 +1673,6 @@ xmp:before {
   content: "";
   width: .8rem;
   height: .1rem;
-  background-color: #F0F0F0;
   position: absolute;
   top: 1.5rem;
   right: 0.5rem;
@@ -1722,7 +1719,6 @@ xmp:before {
   .navbar .navbar__menu > ul {
     padding: 0;
     font-size: 0;
-    background: #ee7203;
     border-bottom: none;
     position: initial;
     display: -webkit-box !important;
@@ -1741,7 +1737,7 @@ xmp:before {
     padding: .2rem;
     margin-bottom: .1rem;
     text-align: right;
-    border: solid #F0F0F0;
+    border-style: solid;
     border-width: 0 1px 1px 0;
     position: absolute;
     right: 1rem;
@@ -1751,9 +1747,6 @@ xmp:before {
   }
   .navbar .navbar__menu > ul > li {
     display: inline-block;
-  }
-  .navbar .navbar__menu > ul > li:hover {
-    background: rgba(0, 0, 0, 0.1);
   }
   .navbar .navbar__menu > ul > li > a {
     position: relative;
@@ -1767,15 +1760,11 @@ xmp:before {
   .navbar .navbar__menu ul li.dropdown_menu > a > span {
     display: none;
   }
-  .navbar .navbar__menu ul ul li:hover {
-    background: black;
-  }
   .navbar .navbar__menu ul ul li > a {
     position: relative;
     padding: .9rem;
   }
   .navbar .navbar__menu li > ul {
-    background: #F8F9FA;
     position: absolute;
     top: 100%;
     left: 0;
@@ -1796,7 +1785,7 @@ xmp:before {
     padding: .2rem;
     margin-bottom: .1rem;
     text-align: right;
-    border: solid #F0F0F0;
+    border-style: solid;
     border-width: 0 1px 1px 0;
     position: absolute;
     right: 1rem;
@@ -1828,55 +1817,924 @@ xmp:before {
 .primary {
   background: #ee7203;
   color: #0D0D0D;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.primary.navbar {
+  border-color: #F0F0F0;
+}
+
+.primary.navbar .navbar__brand a {
+  color: #0D0D0D;
+}
+
+.primary.navbar .navbar__menu > ul {
+  background: #251200;
+  border-color: #ee7203;
+}
+
+.primary.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.primary.navbar .navbar__menu ul ul li {
+  background: #0b0500;
+}
+
+.primary.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.primary .navbar__fast-contact > div {
+  color: #0D0D0D;
+}
+
+.primary .navbar__navicon {
+  color: #0D0D0D;
+}
+
+.primary .dropdown-plus::after, .primary .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .primary.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .primary.navbar .navbar__menu > ul li a {
+    color: #0D0D0D;
+  }
+  .primary.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #0D0D0D;
+  }
+  .primary.navbar .navbar__menu > ul > li:hover {
+    background: #d56603;
+  }
+  .primary.navbar .navbar__menu ul ul li {
+    background: #251200 !important;
+  }
+  .primary.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .primary.navbar .navbar__menu ul ul li:hover {
+    background: #0b0500 !important;
+  }
 }
 
 .primary-light {
   background: #ffead8;
   color: #0D0D0D;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.primary-light.navbar {
+  border-color: #F0F0F0;
+}
+
+.primary-light.navbar .navbar__brand a {
+  color: #0D0D0D;
+}
+
+.primary-light.navbar .navbar__menu > ul {
+  background: #fc7f0f;
+  border-color: #ffead8;
+}
+
+.primary-light.navbar .navbar__menu ul li > a {
+  color: #0D0D0D;
+}
+
+.primary-light.navbar .navbar__menu ul ul li {
+  background: #ee7203;
+}
+
+.primary-light.navbar .navbar__menu ul ul li ul li {
+  background: #d56603;
+}
+
+.primary-light .navbar__fast-contact > div {
+  color: #0D0D0D;
+}
+
+.primary-light .navbar__navicon {
+  color: #0D0D0D;
+}
+
+.primary-light .dropdown-plus::after, .primary-light .dropdown-plus::before {
+  background: #0D0D0D;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .primary-light.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .primary-light.navbar .navbar__menu > ul li a {
+    color: #0D0D0D;
+  }
+  .primary-light.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #0D0D0D;
+  }
+  .primary-light.navbar .navbar__menu > ul > li:hover {
+    background: #feddbf;
+  }
+  .primary-light.navbar .navbar__menu ul ul li {
+    background: #fc7f0f !important;
+  }
+  .primary-light.navbar .navbar__menu ul ul li a {
+    color: #0D0D0D;
+  }
+  .primary-light.navbar .navbar__menu ul ul li:hover {
+    background: #ee7203 !important;
+  }
 }
 
 .primary-dark {
   background: #3e1e01;
   color: #F0F0F0;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.primary-dark.navbar {
+  border-color: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__brand a {
+  color: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__menu > ul {
+  background: black;
+  border-color: #3e1e01;
+}
+
+.primary-dark.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__menu ul ul li {
+  background: black;
+}
+
+.primary-dark.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.primary-dark .navbar__fast-contact > div {
+  color: #F0F0F0;
+}
+
+.primary-dark .navbar__navicon {
+  color: #F0F0F0;
+}
+
+.primary-dark .dropdown-plus::after, .primary-dark .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .primary-dark.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .primary-dark.navbar .navbar__menu > ul li a {
+    color: #F0F0F0;
+  }
+  .primary-dark.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #F0F0F0;
+  }
+  .primary-dark.navbar .navbar__menu > ul > li:hover {
+    background: #251200;
+  }
+  .primary-dark.navbar .navbar__menu ul ul li {
+    background: black !important;
+  }
+  .primary-dark.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .primary-dark.navbar .navbar__menu ul ul li:hover {
+    background: black !important;
+  }
 }
 
 .secondary {
   background: #0D0D0D;
   color: #F0F0F0;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.secondary.navbar {
+  border-color: #F0F0F0;
+}
+
+.secondary.navbar .navbar__brand a {
+  color: #F0F0F0;
+}
+
+.secondary.navbar .navbar__menu > ul {
+  background: black;
+  border-color: #0D0D0D;
+}
+
+.secondary.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.secondary.navbar .navbar__menu ul ul li {
+  background: black;
+}
+
+.secondary.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.secondary .navbar__fast-contact > div {
+  color: #F0F0F0;
+}
+
+.secondary .navbar__navicon {
+  color: #F0F0F0;
+}
+
+.secondary .dropdown-plus::after, .secondary .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .secondary.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .secondary.navbar .navbar__menu > ul li a {
+    color: #F0F0F0;
+  }
+  .secondary.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #F0F0F0;
+  }
+  .secondary.navbar .navbar__menu > ul > li:hover {
+    background: black;
+  }
+  .secondary.navbar .navbar__menu ul ul li {
+    background: black !important;
+  }
+  .secondary.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .secondary.navbar .navbar__menu ul ul li:hover {
+    background: black !important;
+  }
 }
 
 .secondary-light {
   background: #d9d9d9;
   color: #0D0D0D;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.secondary-light.navbar {
+  border-color: #F0F0F0;
+}
+
+.secondary-light.navbar .navbar__brand a {
+  color: #0D0D0D;
+}
+
+.secondary-light.navbar .navbar__menu > ul {
+  background: #737373;
+  border-color: #d9d9d9;
+}
+
+.secondary-light.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.secondary-light.navbar .navbar__menu ul ul li {
+  background: #666666;
+}
+
+.secondary-light.navbar .navbar__menu ul ul li ul li {
+  background: #5a5a5a;
+}
+
+.secondary-light .navbar__fast-contact > div {
+  color: #0D0D0D;
+}
+
+.secondary-light .navbar__navicon {
+  color: #0D0D0D;
+}
+
+.secondary-light .dropdown-plus::after, .secondary-light .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .secondary-light.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .secondary-light.navbar .navbar__menu > ul li a {
+    color: #0D0D0D;
+  }
+  .secondary-light.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #0D0D0D;
+  }
+  .secondary-light.navbar .navbar__menu > ul > li:hover {
+    background: #cccccc;
+  }
+  .secondary-light.navbar .navbar__menu ul ul li {
+    background: #737373 !important;
+  }
+  .secondary-light.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .secondary-light.navbar .navbar__menu ul ul li:hover {
+    background: #666666 !important;
+  }
 }
 
 .secondary-dark {
   background: #3e1e01;
   color: #F0F0F0;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.secondary-dark.navbar {
+  border-color: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__brand a {
+  color: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__menu > ul {
+  background: black;
+  border-color: #3e1e01;
+}
+
+.secondary-dark.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__menu ul ul li {
+  background: black;
+}
+
+.secondary-dark.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.secondary-dark .navbar__fast-contact > div {
+  color: #F0F0F0;
+}
+
+.secondary-dark .navbar__navicon {
+  color: #F0F0F0;
+}
+
+.secondary-dark .dropdown-plus::after, .secondary-dark .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .secondary-dark.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .secondary-dark.navbar .navbar__menu > ul li a {
+    color: #F0F0F0;
+  }
+  .secondary-dark.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #F0F0F0;
+  }
+  .secondary-dark.navbar .navbar__menu > ul > li:hover {
+    background: #251200;
+  }
+  .secondary-dark.navbar .navbar__menu ul ul li {
+    background: black !important;
+  }
+  .secondary-dark.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .secondary-dark.navbar .navbar__menu ul ul li:hover {
+    background: black !important;
+  }
 }
 
 .light {
   background: #F0F0F0;
   color: #0D0D0D;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.light.navbar {
+  border-color: #F0F0F0;
+}
+
+.light.navbar .navbar__brand a {
+  color: #0D0D0D;
+}
+
+.light.navbar .navbar__menu > ul {
+  background: #8a8a8a;
+  border-color: #F0F0F0;
+}
+
+.light.navbar .navbar__menu ul li > a {
+  color: #0D0D0D;
+}
+
+.light.navbar .navbar__menu ul ul li {
+  background: #7d7d7d;
+}
+
+.light.navbar .navbar__menu ul ul li ul li {
+  background: #717171;
+}
+
+.light .navbar__fast-contact > div {
+  color: #0D0D0D;
+}
+
+.light .navbar__navicon {
+  color: #0D0D0D;
+}
+
+.light .dropdown-plus::after, .light .dropdown-plus::before {
+  background: #0D0D0D;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .light.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .light.navbar .navbar__menu > ul li a {
+    color: #0D0D0D;
+  }
+  .light.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #0D0D0D;
+  }
+  .light.navbar .navbar__menu > ul > li:hover {
+    background: #e3e3e3;
+  }
+  .light.navbar .navbar__menu ul ul li {
+    background: #8a8a8a !important;
+  }
+  .light.navbar .navbar__menu ul ul li a {
+    color: #0D0D0D;
+  }
+  .light.navbar .navbar__menu ul ul li:hover {
+    background: #7d7d7d !important;
+  }
 }
 
 .dark {
   background: #0D0D0D;
   color: #F0F0F0;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.dark.navbar {
+  border-color: #F0F0F0;
+}
+
+.dark.navbar .navbar__brand a {
+  color: #F0F0F0;
+}
+
+.dark.navbar .navbar__menu > ul {
+  background: black;
+  border-color: #0D0D0D;
+}
+
+.dark.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.dark.navbar .navbar__menu ul ul li {
+  background: black;
+}
+
+.dark.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.dark .navbar__fast-contact > div {
+  color: #F0F0F0;
+}
+
+.dark .navbar__navicon {
+  color: #F0F0F0;
+}
+
+.dark .dropdown-plus::after, .dark .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .dark.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .dark.navbar .navbar__menu > ul li a {
+    color: #F0F0F0;
+  }
+  .dark.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #F0F0F0;
+  }
+  .dark.navbar .navbar__menu > ul > li:hover {
+    background: black;
+  }
+  .dark.navbar .navbar__menu ul ul li {
+    background: black !important;
+  }
+  .dark.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .dark.navbar .navbar__menu ul ul li:hover {
+    background: black !important;
+  }
 }
 
 .good {
   background: #1AED9E;
   color: #0D0D0D;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.good.navbar {
+  border-color: #F0F0F0;
+}
+
+.good.navbar .navbar__brand a {
+  color: #0D0D0D;
+}
+
+.good.navbar .navbar__menu > ul {
+  background: #043724;
+  border-color: #1AED9E;
+}
+
+.good.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.good.navbar .navbar__menu ul ul li {
+  background: #021f14;
+}
+
+.good.navbar .navbar__menu ul ul li ul li {
+  background: #010705;
+}
+
+.good .navbar__fast-contact > div {
+  color: #0D0D0D;
+}
+
+.good .navbar__navicon {
+  color: #0D0D0D;
+}
+
+.good .dropdown-plus::after, .good .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .good.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .good.navbar .navbar__menu > ul li a {
+    color: #0D0D0D;
+  }
+  .good.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #0D0D0D;
+  }
+  .good.navbar .navbar__menu > ul > li:hover {
+    background: #11dc90;
+  }
+  .good.navbar .navbar__menu ul ul li {
+    background: #043724 !important;
+  }
+  .good.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .good.navbar .navbar__menu ul ul li:hover {
+    background: #021f14 !important;
+  }
 }
 
 .warning {
   background: #EDAB0E;
   color: #0D0D0D;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.warning.navbar {
+  border-color: #F0F0F0;
+}
+
+.warning.navbar .navbar__brand a {
+  color: #0D0D0D;
+}
+
+.warning.navbar .navbar__menu > ul {
+  background: #2c2003;
+  border-color: #EDAB0E;
+}
+
+.warning.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.warning.navbar .navbar__menu ul ul li {
+  background: #140f01;
+}
+
+.warning.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.warning .navbar__fast-contact > div {
+  color: #0D0D0D;
+}
+
+.warning .navbar__navicon {
+  color: #0D0D0D;
+}
+
+.warning .dropdown-plus::after, .warning .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .warning.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .warning.navbar .navbar__menu > ul li a {
+    color: #0D0D0D;
+  }
+  .warning.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #0D0D0D;
+  }
+  .warning.navbar .navbar__menu > ul > li:hover {
+    background: #d59a0d;
+  }
+  .warning.navbar .navbar__menu ul ul li {
+    background: #2c2003 !important;
+  }
+  .warning.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .warning.navbar .navbar__menu ul ul li:hover {
+    background: #140f01 !important;
+  }
 }
 
 .danger {
   background: #ED350E;
   color: #F0F0F0;
+  /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+  /*
+      * FAST CONTACT
+      */
+  /*
+      * NAVICON
+      */
+}
+
+.danger.navbar {
+  border-color: #F0F0F0;
+}
+
+.danger.navbar .navbar__brand a {
+  color: #F0F0F0;
+}
+
+.danger.navbar .navbar__menu > ul {
+  background: #2c0a03;
+  border-color: #ED350E;
+}
+
+.danger.navbar .navbar__menu ul li > a {
+  color: #F0F0F0;
+}
+
+.danger.navbar .navbar__menu ul ul li {
+  background: #140501;
+}
+
+.danger.navbar .navbar__menu ul ul li ul li {
+  background: black;
+}
+
+.danger .navbar__fast-contact > div {
+  color: #F0F0F0;
+}
+
+.danger .navbar__navicon {
+  color: #F0F0F0;
+}
+
+.danger .dropdown-plus::after, .danger .dropdown-plus::before {
+  background: #F0F0F0;
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+@media (min-width: 992px) {
+  .danger.navbar .navbar__menu > ul {
+    background: transparent !important;
+  }
+  .danger.navbar .navbar__menu > ul li a {
+    color: #F0F0F0;
+  }
+  .danger.navbar .navbar__menu > ul > .dropdown_menu::after {
+    color: #F0F0F0;
+  }
+  .danger.navbar .navbar__menu > ul > li:hover {
+    background: #d5300d;
+  }
+  .danger.navbar .navbar__menu ul ul li {
+    background: #2c0a03 !important;
+  }
+  .danger.navbar .navbar__menu ul ul li a {
+    color: #F0F0F0;
+  }
+  .danger.navbar .navbar__menu ul ul li:hover {
+    background: #140501 !important;
+  }
 }
 /*# sourceMappingURL=app.css.map */

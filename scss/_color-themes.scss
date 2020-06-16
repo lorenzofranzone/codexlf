@@ -29,11 +29,160 @@ $themes: (
 // @param $color: color of the theme
 
 @mixin theme($name, $color) {
+
+   $mDrop: darken($color,40);
+   $mDrop2: darken($mDrop,5);
+   $mDrop3: darken($mDrop2,5);
+   
+   $hL1: darken($color,5);
+   $hL2: darken($mDrop,5);
+   $hL3: darken($hL2,5);
+
    .#{$name} {
       background: $color;
       @include text-contrast($color);
-   }
-}
+
+      /*
+      * ==================================================
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * N A V B A R S
+      * ––––––––––––––––––––––––––––––––––––––––––––––––––
+      * ==================================================
+      */
+
+      &.navbar{
+         border-color: $light;
+         
+         .navbar__brand{
+            
+            a{ @include text-contrast($color); }
+            
+         } // .navbar__brand
+         
+         .navbar__menu{
+            
+            > ul{
+               background: $mDrop;
+               border-color: $color;
+            }
+            
+            ul{
+               
+               li{
+                  
+                  > a{ @include text-contrast($mDrop); } // link item
+                  
+               } // list items
+               
+               ul{
+                     
+                  li{
+                     background: $mDrop2;
+                     
+                     ul{
+                     
+                        li{ background: $mDrop3; }
+                     
+                     }
+                     
+                  }
+                  
+               } // submenu
+               
+            } // menu
+            
+         } // .navbar__menu
+         
+      } // .navbar
+      
+      
+      /*
+      * FAST CONTACT
+      */
+      
+      .navbar__fast-contact{
+         
+         > div{ @include text-contrast($color); }
+         
+      } // .navbar__fast-contact
+      
+      
+      /*
+      * NAVICON
+      */
+      
+      .navbar__navicon{ @include text-contrast($color); } // .navbar__navicon
+      
+      .dropdown-plus{
+         
+         &::after, &::before{ @include bg-contrast($mDrop); }
+         
+      }
+      
+   } // .#{$name}
+
+
+   /*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * MEDIA QUERY
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+
+   @media (min-width: $media-desktop){
+      
+      .#{$name}{
+         
+         &.navbar{
+            
+            .navbar__menu{
+               
+               > ul{
+                  background: transparent!important;
+                  
+                  li{
+                     
+                     a{ @include text-contrast($color); } // link item
+                     
+                  }
+                  
+                  > .dropdown_menu{
+                     
+                     &::after{ @include text-contrast($color); }
+                     
+                  } // .navbar .navbar__menu > ul > .dropdown_menu
+                  
+                  > li{                  
+                     
+                     &:hover{
+                        background: $hL1;
+                     }
+                     
+                  } // list item
+                  
+               } // .navbar .navbar__menu > ul
+               
+               ul{
+                  
+                  ul li{
+                     background: $mDrop!important;
+                     
+                     a{ @include text-contrast($mDrop); }
+                     
+                  }
+
+                  ul li:hover{ background: $hL2!important; }
+                  
+               } // ul
+               
+            } // .navbar .navbar__menu
+            
+         } // .navbar
+         
+      } // .#{$name}
+      
+   } // @ media desktop up
+   
+} // @mixin theme($name, $color)
 
 
 // Including themes 
