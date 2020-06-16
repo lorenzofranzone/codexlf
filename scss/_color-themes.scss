@@ -9,7 +9,7 @@
 */
 
 
-$themes: (
+$navThemes: (
    primary: $primary,
    primary-light: $primaryLight,
    primary-dark: $primaryDark,
@@ -18,9 +18,6 @@ $themes: (
    secondary-dark: $primaryDark,
    light: $light,
    dark: $dark,
-   good: $good,
-   warning: $warning,
-   danger: $danger
 );
 
 
@@ -169,7 +166,7 @@ $themes: (
                      a{ @include text-contrast($mDrop); }
                      
                   }
-
+                  
                   ul li:hover{ background: $hL2!important; }
                   
                } // ul
@@ -187,6 +184,6 @@ $themes: (
 
 // Including themes 
 // By looping through the $themes map
-@each $key, $value in $themes {
+@each $key, $value in $navThemes {
    @include theme($key, $value);
 }
