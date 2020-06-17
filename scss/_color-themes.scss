@@ -148,14 +148,6 @@ $navThemes: (
                      
                   } // .navbar .navbar__menu > ul > .dropdown_menu
                   
-                  > li{                  
-                     
-                     &:hover{
-                        background: $hL1;
-                     }
-                     
-                  } // list item
-                  
                } // .navbar .navbar__menu > ul
                
                ul{
@@ -167,7 +159,11 @@ $navThemes: (
                      
                   }
                   
-                  ul li:hover{ background: $hL2!important; }
+                  ul .dropdown_menu{
+                     
+                     &::after{ @include border-contrast($mDrop); }
+                     
+                  } // .navbar .navbar__menu > ul > .dropdown_menu
                   
                } // ul
                
@@ -178,6 +174,37 @@ $navThemes: (
       } // .#{$name}
       
    } // @ media desktop up
+
+
+   /*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+   
+   .#{$name}{
+      
+      /*
+      * Hover BG
+      */
+      
+      &.navbar.hover{
+         
+         .navbar__menu{
+            
+            > ul li:hover{ background: $hL1; }
+                  
+            ul{
+               
+               ul li:hover{ background: $hL2!important; }
+               
+            } // ul
+            
+         } // .navbar .navbar__menu
+         
+      } // .navbar.hover
+      
+   } // .#{$name}
    
 } // @mixin theme($name, $color)
 

@@ -23,7 +23,6 @@
 //
 
 $primary: #ee7203;
-// $primary: #c271b4;
 $primaryLight: lighten($primary,45);
 $primaryDark: darken($primary,35);
 
@@ -89,8 +88,8 @@ $lineHeight: 140%; // default % line height
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 //
 
-$max-width: 80%;  // container max-width
-$gutter: 32px;    // columns gutter
+$max-width: 80%;  // container max-width in %
+$gutter: 2rem;    // columns gutter
 $max-columns: 4;  // max number of auto-columns
 
 

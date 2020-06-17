@@ -13,17 +13,6 @@
 * T Y P O G R A P H Y
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-pre, code, kbd, samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em;
-}
-
-pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-}
-
 /*
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 * XLF RESET
@@ -234,7 +223,7 @@ body, html {
 * ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 .grid-row [class*="col-"] {
-  padding: 16px;
+  padding: 1rem;
   position: relative;
   width: 100%;
 }
@@ -243,7 +232,7 @@ body, html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 16px;
+  padding: 1rem;
 }
 
 /*
@@ -1884,18 +1873,34 @@ xmp:before {
   .primary.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #0D0D0D;
   }
-  .primary.navbar .navbar__menu > ul > li:hover {
-    background: #d56603;
-  }
   .primary.navbar .navbar__menu ul ul li {
     background: #251200 !important;
   }
   .primary.navbar .navbar__menu ul ul li a {
     color: #F0F0F0;
   }
-  .primary.navbar .navbar__menu ul ul li:hover {
-    background: #0b0500 !important;
+  .primary.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #F0F0F0;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.primary {
+  /*
+      * Hover BG
+      */
+}
+
+.primary.navbar.hover .navbar__menu > ul li:hover {
+  background: #d56603;
+}
+
+.primary.navbar.hover .navbar__menu ul ul li:hover {
+  background: #0b0500 !important;
 }
 
 .primary-light {
@@ -1968,18 +1973,34 @@ xmp:before {
   .primary-light.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #0D0D0D;
   }
-  .primary-light.navbar .navbar__menu > ul > li:hover {
-    background: #feddbf;
-  }
   .primary-light.navbar .navbar__menu ul ul li {
     background: #fc7f0f !important;
   }
   .primary-light.navbar .navbar__menu ul ul li a {
     color: #0D0D0D;
   }
-  .primary-light.navbar .navbar__menu ul ul li:hover {
-    background: #ee7203 !important;
+  .primary-light.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #0D0D0D;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.primary-light {
+  /*
+      * Hover BG
+      */
+}
+
+.primary-light.navbar.hover .navbar__menu > ul li:hover {
+  background: #feddbf;
+}
+
+.primary-light.navbar.hover .navbar__menu ul ul li:hover {
+  background: #ee7203 !important;
 }
 
 .primary-dark {
@@ -2052,18 +2073,34 @@ xmp:before {
   .primary-dark.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #F0F0F0;
   }
-  .primary-dark.navbar .navbar__menu > ul > li:hover {
-    background: #251200;
-  }
   .primary-dark.navbar .navbar__menu ul ul li {
     background: black !important;
   }
   .primary-dark.navbar .navbar__menu ul ul li a {
     color: #F0F0F0;
   }
-  .primary-dark.navbar .navbar__menu ul ul li:hover {
-    background: black !important;
+  .primary-dark.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #F0F0F0;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.primary-dark {
+  /*
+      * Hover BG
+      */
+}
+
+.primary-dark.navbar.hover .navbar__menu > ul li:hover {
+  background: #251200;
+}
+
+.primary-dark.navbar.hover .navbar__menu ul ul li:hover {
+  background: black !important;
 }
 
 .secondary {
@@ -2136,18 +2173,34 @@ xmp:before {
   .secondary.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #F0F0F0;
   }
-  .secondary.navbar .navbar__menu > ul > li:hover {
-    background: black;
-  }
   .secondary.navbar .navbar__menu ul ul li {
     background: black !important;
   }
   .secondary.navbar .navbar__menu ul ul li a {
     color: #F0F0F0;
   }
-  .secondary.navbar .navbar__menu ul ul li:hover {
-    background: black !important;
+  .secondary.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #F0F0F0;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.secondary {
+  /*
+      * Hover BG
+      */
+}
+
+.secondary.navbar.hover .navbar__menu > ul li:hover {
+  background: black;
+}
+
+.secondary.navbar.hover .navbar__menu ul ul li:hover {
+  background: black !important;
 }
 
 .secondary-light {
@@ -2220,18 +2273,34 @@ xmp:before {
   .secondary-light.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #0D0D0D;
   }
-  .secondary-light.navbar .navbar__menu > ul > li:hover {
-    background: #cccccc;
-  }
   .secondary-light.navbar .navbar__menu ul ul li {
     background: #737373 !important;
   }
   .secondary-light.navbar .navbar__menu ul ul li a {
     color: #F0F0F0;
   }
-  .secondary-light.navbar .navbar__menu ul ul li:hover {
-    background: #666666 !important;
+  .secondary-light.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #F0F0F0;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.secondary-light {
+  /*
+      * Hover BG
+      */
+}
+
+.secondary-light.navbar.hover .navbar__menu > ul li:hover {
+  background: #cccccc;
+}
+
+.secondary-light.navbar.hover .navbar__menu ul ul li:hover {
+  background: #666666 !important;
 }
 
 .secondary-dark {
@@ -2304,18 +2373,34 @@ xmp:before {
   .secondary-dark.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #F0F0F0;
   }
-  .secondary-dark.navbar .navbar__menu > ul > li:hover {
-    background: #251200;
-  }
   .secondary-dark.navbar .navbar__menu ul ul li {
     background: black !important;
   }
   .secondary-dark.navbar .navbar__menu ul ul li a {
     color: #F0F0F0;
   }
-  .secondary-dark.navbar .navbar__menu ul ul li:hover {
-    background: black !important;
+  .secondary-dark.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #F0F0F0;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.secondary-dark {
+  /*
+      * Hover BG
+      */
+}
+
+.secondary-dark.navbar.hover .navbar__menu > ul li:hover {
+  background: #251200;
+}
+
+.secondary-dark.navbar.hover .navbar__menu ul ul li:hover {
+  background: black !important;
 }
 
 .light {
@@ -2388,18 +2473,34 @@ xmp:before {
   .light.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #0D0D0D;
   }
-  .light.navbar .navbar__menu > ul > li:hover {
-    background: #e3e3e3;
-  }
   .light.navbar .navbar__menu ul ul li {
     background: #8a8a8a !important;
   }
   .light.navbar .navbar__menu ul ul li a {
     color: #0D0D0D;
   }
-  .light.navbar .navbar__menu ul ul li:hover {
-    background: #7d7d7d !important;
+  .light.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #0D0D0D;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.light {
+  /*
+      * Hover BG
+      */
+}
+
+.light.navbar.hover .navbar__menu > ul li:hover {
+  background: #e3e3e3;
+}
+
+.light.navbar.hover .navbar__menu ul ul li:hover {
+  background: #7d7d7d !important;
 }
 
 .dark {
@@ -2472,17 +2573,33 @@ xmp:before {
   .dark.navbar .navbar__menu > ul > .dropdown_menu::after {
     color: #F0F0F0;
   }
-  .dark.navbar .navbar__menu > ul > li:hover {
-    background: black;
-  }
   .dark.navbar .navbar__menu ul ul li {
     background: black !important;
   }
   .dark.navbar .navbar__menu ul ul li a {
     color: #F0F0F0;
   }
-  .dark.navbar .navbar__menu ul ul li:hover {
-    background: black !important;
+  .dark.navbar .navbar__menu ul ul .dropdown_menu::after {
+    border-color: #F0F0F0;
   }
+}
+
+/*
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   * HOVER EFFECTS
+   * ––––––––––––––––––––––––––––––––––––––––––––––––––
+   */
+.dark {
+  /*
+      * Hover BG
+      */
+}
+
+.dark.navbar.hover .navbar__menu > ul li:hover {
+  background: black;
+}
+
+.dark.navbar.hover .navbar__menu ul ul li:hover {
+  background: black !important;
 }
 /*# sourceMappingURL=app.css.map */
