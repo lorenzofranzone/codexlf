@@ -1700,10 +1700,15 @@ xmp:before {
   .navbar .navbar__navicon {
     display: none;
   }
-  .navbar .navbar__menu:after {
-    content: "";
-    display: table;
-    clear: both;
+  .navbar .navbar__menu {
+    /*
+         * ––––––––––––––––––––––––––––––––––––––––––––––––––
+         * HOVER EFFECTS
+         * ––––––––––––––––––––––––––––––––––––––––––––––––––
+         */
+    /* Underline */
+    /* Underline-fill */
+    /* Eye */
   }
   .navbar .navbar__menu > ul {
     padding: 0;
@@ -1786,11 +1791,100 @@ xmp:before {
     opacity: 1;
     visibility: visible;
   }
+  .navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    height: 1px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .navbar .navbar__menu.underline > ul > li > a:hover::before {
+    width: 100%;
+  }
+  .navbar .navbar__menu.underline-fill > ul > li > a::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    height: 1px;
+    opacity: 0;
+  }
+  .navbar .navbar__menu.underline-fill > ul > li > a {
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .navbar .navbar__menu.underline-fill > ul > li > a:hover {
+    z-index: 1;
+  }
+  .navbar .navbar__menu.underline-fill > ul > li > a:hover::before {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+  .navbar .navbar__menu.eye > ul > li > a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .navbar .navbar__menu.eye > ul > li > a {
+    z-index: 0;
+  }
+  .navbar .navbar__menu.eye > ul > li > a:hover::before {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
   .dropdown-plus {
     display: none;
   }
   .navbar__fast-contact {
     display: none;
+  }
+}
+
+/*
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+* K E Y F R A M E S
+* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #d56603;
   }
 }
 
@@ -1889,18 +1983,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.primary {
+.primary.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.primary.navbar.hover .navbar__menu > ul li:hover {
+.primary.navbar .navbar__menu.hover > ul li:hover {
   background: #d56603;
 }
 
-.primary.navbar.hover .navbar__menu ul ul li:hover {
+.primary.navbar .navbar__menu.hover ul ul li:hover {
   background: #0b0500 !important;
+}
+
+.primary.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #0D0D0D;
+}
+
+.primary.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #0D0D0D;
+}
+
+.primary.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.primary.navbar .navbar__menu.eye > ul > li > a::before {
+  background: #d56603;
+}
+
+.primary.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.primary.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: #d56603;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .primary-light {
@@ -1989,18 +2118,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.primary-light {
+.primary-light.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.primary-light.navbar.hover .navbar__menu > ul li:hover {
+.primary-light.navbar .navbar__menu.hover > ul li:hover {
   background: #feddbf;
 }
 
-.primary-light.navbar.hover .navbar__menu ul ul li:hover {
+.primary-light.navbar .navbar__menu.hover ul ul li:hover {
   background: #ee7203 !important;
+}
+
+.primary-light.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #0D0D0D;
+}
+
+.primary-light.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #0D0D0D;
+}
+
+.primary-light.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.primary-light.navbar .navbar__menu.eye > ul > li > a::before {
+  background: #feddbf;
+}
+
+.primary-light.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.primary-light.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: #feddbf;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .primary-dark {
@@ -2089,18 +2253,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.primary-dark {
+.primary-dark.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.primary-dark.navbar.hover .navbar__menu > ul li:hover {
+.primary-dark.navbar .navbar__menu.hover > ul li:hover {
   background: #251200;
 }
 
-.primary-dark.navbar.hover .navbar__menu ul ul li:hover {
+.primary-dark.navbar .navbar__menu.hover ul ul li:hover {
   background: black !important;
+}
+
+.primary-dark.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__menu.eye > ul > li > a::before {
+  background: #251200;
+}
+
+.primary-dark.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.primary-dark.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: #251200;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .secondary {
@@ -2189,18 +2388,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.secondary {
+.secondary.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.secondary.navbar.hover .navbar__menu > ul li:hover {
+.secondary.navbar .navbar__menu.hover > ul li:hover {
   background: black;
 }
 
-.secondary.navbar.hover .navbar__menu ul ul li:hover {
+.secondary.navbar .navbar__menu.hover ul ul li:hover {
   background: black !important;
+}
+
+.secondary.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #F0F0F0;
+}
+
+.secondary.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #F0F0F0;
+}
+
+.secondary.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.secondary.navbar .navbar__menu.eye > ul > li > a::before {
+  background: black;
+}
+
+.secondary.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.secondary.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: black;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .secondary-light {
@@ -2289,18 +2523,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.secondary-light {
+.secondary-light.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.secondary-light.navbar.hover .navbar__menu > ul li:hover {
+.secondary-light.navbar .navbar__menu.hover > ul li:hover {
   background: #cccccc;
 }
 
-.secondary-light.navbar.hover .navbar__menu ul ul li:hover {
+.secondary-light.navbar .navbar__menu.hover ul ul li:hover {
   background: #666666 !important;
+}
+
+.secondary-light.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #0D0D0D;
+}
+
+.secondary-light.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #0D0D0D;
+}
+
+.secondary-light.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.secondary-light.navbar .navbar__menu.eye > ul > li > a::before {
+  background: #cccccc;
+}
+
+.secondary-light.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.secondary-light.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: #cccccc;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .secondary-dark {
@@ -2389,18 +2658,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.secondary-dark {
+.secondary-dark.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.secondary-dark.navbar.hover .navbar__menu > ul li:hover {
+.secondary-dark.navbar .navbar__menu.hover > ul li:hover {
   background: #251200;
 }
 
-.secondary-dark.navbar.hover .navbar__menu ul ul li:hover {
+.secondary-dark.navbar .navbar__menu.hover ul ul li:hover {
   background: black !important;
+}
+
+.secondary-dark.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__menu.eye > ul > li > a::before {
+  background: #251200;
+}
+
+.secondary-dark.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.secondary-dark.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: #251200;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .light {
@@ -2489,18 +2793,53 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.light {
+.light.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.light.navbar.hover .navbar__menu > ul li:hover {
+.light.navbar .navbar__menu.hover > ul li:hover {
   background: #e3e3e3;
 }
 
-.light.navbar.hover .navbar__menu ul ul li:hover {
+.light.navbar .navbar__menu.hover ul ul li:hover {
   background: #7d7d7d !important;
+}
+
+.light.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #0D0D0D;
+}
+
+.light.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #0D0D0D;
+}
+
+.light.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.light.navbar .navbar__menu.eye > ul > li > a::before {
+  background: #e3e3e3;
+}
+
+.light.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #0D0D0D;
+}
+
+.light.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: #e3e3e3;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 
 .dark {
@@ -2589,17 +2928,52 @@ xmp:before {
    * HOVER EFFECTS
    * ––––––––––––––––––––––––––––––––––––––––––––––––––
    */
-.dark {
+.dark.navbar {
   /*
-      * Hover BG
-      */
+         * Hover
+         */
+  /*
+         * Underline
+         */
+  /*
+         * Underline-fill
+         */
+  /*
+         * Eye
+         */
 }
 
-.dark.navbar.hover .navbar__menu > ul li:hover {
+.dark.navbar .navbar__menu.hover > ul li:hover {
   background: black;
 }
 
-.dark.navbar.hover .navbar__menu ul ul li:hover {
+.dark.navbar .navbar__menu.hover ul ul li:hover {
   background: black !important;
+}
+
+.dark.navbar .navbar__menu.underline > ul > li:not(.dropdown_menu) > a::before {
+  background: #F0F0F0;
+}
+
+.dark.navbar .navbar__menu.underline-fill > ul > li > a::before {
+  background: #F0F0F0;
+}
+
+.dark.navbar .navbar__menu.underline-fill > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.dark.navbar .navbar__menu.eye > ul > li > a::before {
+  background: black;
+}
+
+.dark.navbar .navbar__menu.eye > ul > li > a:hover {
+  color: #F0F0F0;
+}
+
+.dark.navbar .navbar__menu.eye > ul > li.dropdown_menu:hover {
+  background: black;
+  -webkit-transition: background 2s;
+  transition: background 2s;
 }
 /*# sourceMappingURL=app.css.map */

@@ -26,7 +26,7 @@ $navThemes: (
 // @param $color: color of the theme
 
 @mixin theme($name, $color) {
-
+   
    $mDrop: darken($color,40);
    $mDrop2: darken($mDrop,5);
    $mDrop3: darken($mDrop2,5);
@@ -34,7 +34,7 @@ $navThemes: (
    $hL1: darken($color,5);
    $hL2: darken($mDrop,5);
    $hL3: darken($hL2,5);
-
+   
    .#{$name} {
       background: $color;
       @include text-contrast($color);
@@ -184,13 +184,14 @@ $navThemes: (
    
    .#{$name}{
       
-      /*
-      * Hover BG
-      */
       
-      &.navbar.hover{
+      &.navbar{
          
-         .navbar__menu{
+         /*
+         * Hover
+         */
+         
+         .navbar__menu.hover{
             
             > ul li:hover{ background: $hL1; }
                   
@@ -200,9 +201,61 @@ $navThemes: (
                
             } // ul
             
-         } // .navbar .navbar__menu
+         } // .navbar .navbar__menu.hover
          
-      } // .navbar.hover
+         
+         /*
+         * Underline
+         */
+         
+         .navbar__menu.underline{
+            
+            > ul > li:not(.dropdown_menu) > a::before{
+               @include bg-contrast($color);
+            }
+            
+         } // .underline
+         
+         
+         /*
+         * Underline-fill
+         */
+         
+         .navbar__menu.underline-fill{
+            
+            > ul > li > a::before{
+               @include bg-contrast($color);
+            }
+            
+            > ul > li > a:hover{
+               @include text-contrast($hL1);
+            }
+            
+         } // .underline-fill
+         
+         
+         /*
+         * Eye
+         */
+         
+         .navbar__menu.eye{
+            
+            > ul > li > a::before{
+               background: $hL1;
+            }
+            
+            > ul > li > a:hover{
+               @include text-contrast($hL1);
+            }
+            
+            > ul > li.dropdown_menu:hover{
+               background: $hL1;
+               transition: background 2s;
+            }
+            
+         } // .eye
+         
+      } // .navbar
       
    } // .#{$name}
    
